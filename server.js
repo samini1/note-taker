@@ -1,6 +1,5 @@
 //modules required for server
 const express = require('express');
-const fs = require('fs');
 
 //route modules
 const apiRoutes = require('./routes/apiRoutes');
@@ -11,6 +10,8 @@ const app = express();
 const PORT = process.env.PORT || 3001; 
 app.use(express.urlencoded({ extended:true }));
 app.use(express.json());
+//get static pages
+app.use(express.static('public'));
 
 //use api router
 app.use('/api', apiRoutes);

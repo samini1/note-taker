@@ -9,9 +9,7 @@ router.get("/notes", (req, res) => {
 });
 
 //post route should recieve new node to save on the body,
-// add to db.json, return new note to client
-//each note should have unique id (look at npm packages)
-router.post('/notes', function(req, res) {
+router.post('/notes', (req, res) => {
     //give unique id using uniqid
     req.body.id = uniqid();
     //recieve new note
