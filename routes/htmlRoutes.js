@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const path = require('path');
 //html routes
 //get /notes should return the notes.html
 router.get('/notes', function(req, res) {
