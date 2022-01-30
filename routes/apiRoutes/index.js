@@ -26,4 +26,22 @@ router.post('/notes', (req, res) => {
     return;
 });
 
+//optional delete route
+router.delete('/notes/:id', (req, res) => {
+    //get id of note to delete
+    const deleteID = req.params.id;
+
+    //filter out other notes
+    reArray = savedNotes.filter((otherNotes) => otherNotes.id !== deleteID);
+    
+    //write new data back to db.json
+    fs.writeFileSync('./db/db.json', JSON.stringify(reArray), err => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log('Note deleted');
+        }
+    });  
+})
+
 module.exports = router;
