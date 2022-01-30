@@ -17,8 +17,6 @@ This project should should allow the user to write, save, and delete notes in th
 
 ## Installation
 
-npm install to download required packages
-
 ## Usage
 
 Deployed at : https://stormy-thicket-16940.herokuapp.com/
