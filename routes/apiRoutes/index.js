@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const uniqid = require('uniqid');
+const { v4: uuidv4 } = require('uuid');
 const savedNotes = require('../../db/db.json');
 const fs = require('fs');
 
@@ -14,8 +14,8 @@ router.post('/notes', (req, res) => {
     const newNote = { title, text };
     console.log(newNote);   
     
-    //give unique id using uniqid
-    req.body.id = uniqid();
+    //give unique id using uuid
+    req.body.id = uuidv4();
    
     // //add new note to notes
     savedNotes.push(newNote);
