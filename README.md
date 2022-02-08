@@ -5,6 +5,11 @@
 
 This project should should allow the user to write, save, and delete notes in the application. New notes can be entered into the text field and will be written into a database when the save button is clicked. Titles are displayed in a list and may be clicked to return the note data from the database. Clicking the delete icon should remove the note data object from the database and update the page to display remaining notes.
 
+
+
+![Note Taker deployed app screenshot](Untitled.png)
+          
+          
 ## Table of Contents
 
 * [Installation](#installation)
