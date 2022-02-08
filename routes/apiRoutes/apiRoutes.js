@@ -18,14 +18,14 @@ router.post('/notes', (req, res) => {
         res.send('done');
     } 
     
-    //give unique id using uniqid
-    // req.body.id = uniqid();
-    // //recieve new note
-    // //add new note to notes
-    // savedNotes.push(newNote);
-    // //write notes to db.json
-    // fs.writeFileSync('./db/db.json', JSON.stringify(savedNotes));
-    // res.json(newNote);
+    // give unique id using uniqid
+    req.body.id = uniqid();
+    //recieve new note
+    //add new note to notes
+    savedNotes.push(newNote);
+    //write notes to db.json
+    fs.writeFileSync('./db/db.json', JSON.stringify(savedNotes));
+    res.json(newNote);
 });
 
 module.exports = router;
